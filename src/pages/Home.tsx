@@ -1,11 +1,11 @@
+import Header from "../components/Header";
+
 function Home() {
     return (
         <>
-            <p>
-                {"hello, world"}
-            </p>
+            <Header />
         </>
-    )
+    );
 }
 
 export default Home;
