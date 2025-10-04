@@ -20,7 +20,7 @@ function Header() {
 
     return (
         <>
-            <header className="bg-gray-950 w-full h-auto border-b-indigo-400 border-solid border-1">
+            <header className="bg-gray-950 w-full h-auto border-0 border-b-indigo-400 border-solid border-b-1">
                 <div className="mx-auto max-w-9xl px-2 sm:px-4 lg:px-6">
                     <div className="relative flex h-12 md:h-16 items-center justify-between">
                         <div className="flex flex-row justify-center items-center">
