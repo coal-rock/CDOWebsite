@@ -59,7 +59,7 @@ function Header() {
                         />
 
                         <div
-                            className={`p-2 fixed top-0 right-0 h-full w-38 bg-gray-950 shadow-lg transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
+                            className={`p-4 fixed top-0 right-0 h-full w-38 bg-gray-950 shadow-lg transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"
                                 }`}
 
                         >
