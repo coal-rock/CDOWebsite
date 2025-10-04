@@ -12,13 +12,15 @@ function Home() {
         <>
             <Header />
             <div className="flex flex-col w-full h-full items-center bg-gray-950 overflow-y-scroll">
-                <div className="flex flex-col items-center w-full lg:w-4xl h-full pt-6 gap-8 md:px-4">
+                <div className="flex flex-col items-center w-full lg:w-4xl h-full pt-6 gap-8 lg:gap-12 md:px-4">
                     <div className="flex flex-col gap-6 items-center">
 
                         <div className="text-white text-2xl md:text-4xl font-bold">
                             {"Cyber Defense Organization"}
                         </div>
-                        <img className="md:rounded hover:shadow-xl shadow-indigo-950 hover:scale-101 transform duration-300 px-8 md:px-0" src={hero} />
+                        <div className="md:rounded hover:shadow-xl shadow-indigo-950 hover:scale-101 transform duration-300">
+                            <img className="" src={hero} />
+                        </div>
                     </div>
 
                     <div className="flex flex-col text-white w-full items-center gap-4 p-4 md:p-0 text-center md:text-left">
@@ -37,7 +39,7 @@ function Home() {
                         <Card title="Competition" image={competition} body="We attend multiple competitions throughout the year focusing on red/blue/purple teaming & we even host our own competition, GDDC!" />
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }
