@@ -1,13 +1,21 @@
 import Header from "../components/Header";
 import BoardCard from "../components/BoardCard";
 
-import dylan from "../assets/board/dylan.jpg";
-import nick from "../assets/board/nick.jpg";
-import zoe from "../assets/board/zoe.jpg";
-import lily from "../assets/board/lily.jpg";
-import sean from "../assets/board/sean.jpg";
-import tyler from "../assets/board/tyler.png";
+const loadBoard = () => {
+    const images = import.meta.glob("../assets/board/*", {
+        eager: true,
+    });
 
+    return Object.fromEntries(
+        Object.entries(images).map(([path, module]) => {
+            const fileName = path.split('/').pop()!.replace(".png", "").replace(".jpg", "");
+            return [fileName, (module as { default: string }).default];
+        })
+    );
+};
+
+const board = loadBoard();
+console.log(board);
 
 export default function About() {
     return (
@@ -30,12 +38,23 @@ export default function About() {
                     </div>
 
                     <div className="flex flex-wrap gap-4 justify-center pb-4">
-                        <BoardCard name="Dylan Tarace" position="President" headshot={dylan} />
-                        <BoardCard name="Nick Coppola" position="Vice President" headshot={nick} />
-                        <BoardCard name="Zoe Winden" position="Treasurer" headshot={zoe} />
-                        <BoardCard name="Lily Zheng" position="Secretary" headshot={lily} />
-                        <BoardCard name="Sean Bartoszewicz" position="Marketing" headshot={sean} />
-                        <BoardCard name="Tyler Barnes" position="CTO" headshot={tyler} />
+                        <BoardCard name="Dylan Tarace" position="President" headshot={board.dylan} />
+                        <BoardCard name="Nick Coppola" position="Vice President" headshot={board.nick} />
+                        <BoardCard name="Tyler Barnes" position="Chief Technician" headshot={board.tyler} />
+                        <BoardCard name="Zoe Winden" position="Treasurer" headshot={board.zoe} />
+                        <BoardCard name="Lily Zheng" position="Secretary" headshot={board.lily} />
+                        <BoardCard name="Sean Bartoszewicz" position="Marketing" headshot={board.sean} />
+                    </div>
+
+                    <div className="text-white text-2xl md:text-4xl font-bold">
+                        {"2025-2026 Committee Board"}
+                    </div>
+
+                    <div className="flex flex-wrap gap-4 justify-center pb-4">
+                        <BoardCard name="Roberto Friedlander" position="Blue Team Captain" headshot={board.berto} />
+                        <BoardCard name="Zion Smith-Fox" position="Blue Team Co-Captain" headshot={board.zion} />
+                        <BoardCard name="Jonathan Edwards" position="Red Team Captain" headshot={board.jon} />
+                        <BoardCard name="Matthew Waskiewicz" position="Red Team Co-Captain" headshot={board.matt} />
                     </div>
                 </div>
             </div >
