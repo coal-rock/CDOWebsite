@@ -1,15 +1,18 @@
 import { Link } from "react-router";
+import logo from '../assets/logo.png'
 
 function Header() {
     return (
         <>
-            <nav className="bg-gray-700">
+            <nav className="bg-gray-950">
                 <div className="mx-auto max-w-9xl px-2 sm:px-6 lg:px-8">
                     <div className="relative flex h-16 items-center justify-between">
-                        <div className="flex">
-                            <span className="text-2xl text-white">
+                        <div className="flex flex-row justify-center items-center">
+                            <img src={logo} className="h-12 pr-2">
+                            </img>
+                            <Link to="/" className="text-2xl text-white hover:underline">
                                 {"Cyber Defense Organization"}
-                            </span>
+                            </Link>
                         </div>
                         <div className="flex">
                             {[
