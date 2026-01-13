@@ -6,6 +6,7 @@ import './index.css'
 import Home from './pages/Home.tsx';
 import NotFound from './pages/NotFound.tsx';
 import About from './pages/About.tsx';
+import Alumni from "./pages/Alumni.tsx"
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/alumni" element={<Alumni />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
