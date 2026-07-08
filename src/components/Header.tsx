@@ -12,7 +12,7 @@ function Header() {
         ["Menu", "/"],
         ["Members", "/members"],
         ["Resources", "/resources"],
-        ["Competition", "/gddc"],
+        ["Competition", "/competition"],
 
     ];
 

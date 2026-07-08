@@ -6,7 +6,8 @@ import {Link} from 'react-router';
 // import workshop from '../assets/workshop.png'
 // import community from '../assets/community.png'
 // import competition from '../assets/competition.png'
-import gddc2026 from '../assets/gddc2026.jpg'
+
+import gddc2026 from '../assets/community.jpg'
 import Footer from "../components/Footer.tsx";
 
 
@@ -263,7 +264,10 @@ function Home() {
                     </div>
                     {/* --- END WHAT'S GDDC SECTION --- */}
 
-                    <img src={gddc2026}/>
+                    <img
+                        alt={`Community Picture`}
+                        src={gddc2026}
+                    />
 
                     {/* --- JOIN US SECTION --- */}
                     <div className='flex flex-col w-full mt-16 mb-8 py-20'>
