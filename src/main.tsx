@@ -5,14 +5,14 @@ import './index.css'
 
 import Home from './pages/Home.tsx';
 import NotFound from './pages/NotFound.tsx';
-import About from './pages/About.tsx';
+import Members from './pages/Members.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/members" element={<Members />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

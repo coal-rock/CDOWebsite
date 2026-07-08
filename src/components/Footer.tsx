@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <>
-            <div className='w-full flex flex-col items-center mt-auto '>
+            <div className='w-full flex flex-col items-center mt-auto'>
                 {/* Top Border */}
                 <hr className='w-full border-t-4 border-indigo-200 opacity-50'/>
 
@@ -9,7 +9,7 @@ function Footer() {
                 <div className='flex items-center gap-6 py-8'>
 
                     {/* YouTube */}
-                    <a href='#' target='_blank' rel='noreferrer'
+                    <a href='https://www.youtube.com/@UACDO' target='_blank' rel='noreferrer'
                        className='text-indigo-200 hover:text-white hover:-translate-y-1 transition-all duration-300'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='80px' height='80px' viewBox='0 0 24 24'
                              fill='none'>
@@ -23,7 +23,8 @@ function Footer() {
                     </a>
 
                     {/* LinkedIn */}
-                    <a href='#' target='_blank' rel='noreferrer'
+                    <a href='https://www.linkedin.com/company/cyber-defense-organization/posts/' target='_blank'
+                       rel='noreferrer'
                        className='text-indigo-200 hover:text-white hover:-translate-y-1 transition-all duration-300'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='80px' height='80px' viewBox='0 0 24 24'
                              fill='none'>
@@ -43,8 +44,8 @@ function Footer() {
                         </svg>
                     </a>
 
-
-                    <a href='#' target='_blank' rel='noreferrer'
+                    {/* Instagram */}
+                    <a href='https://www.instagram.com/ualbany_cdo' target='_blank' rel='noreferrer'
                        className='text-indigo-200 hover:text-white hover:-translate-y-1 transition-all duration-300'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='80px' height='80px' viewBox='0 0 24 24'
                              fill='none'>
@@ -60,7 +61,8 @@ function Footer() {
                         </svg>
                     </a>
 
-                    <a href='#' target='_blank' rel='noreferrer'
+                    {/* GitHub */}
+                    <a href='https://github.com/CyberDefenseOrganization' target='_blank' rel='noreferrer'
                        className='text-indigo-200 hover:text-white hover:-translate-y-1 transition-all duration-300'>
                         <svg xmlns='http://www.w3.org/2000/svg' width='80px' height='80px' viewBox='0 0 24 24'
                              fill='none'>
@@ -74,6 +76,18 @@ function Footer() {
                                 stroke-linejoin='round'/>
                             <path d='M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544' stroke='currentColor'
                                   stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/>
+                        </svg>
+                    </a>
+
+                    {/* Discord */}
+                    <a href='https://discord.gg/4cMyjj5Xq' target='_blank' rel='noreferrer'
+                       className='text-indigo-200 hover:text-white hover:-translate-y-1 transition-all duration-300'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='90px' height='90px' viewBox='0 0 192 192'
+                             fill='none'>
+                            <path stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='12'
+                                  d='m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 8.999-6.379 11.548-11.218 7.308-21.769 11.554-31.96 15.8l-8-16m-68-8s20 10 40 10 40-10 40-10'/>
+                            <ellipse cx='71' cy='101' fill='currentColor' rx='13' ry='15'/>
+                            <ellipse cx='121' cy='101' fill='currentColor' rx='13' ry='15'/>
                         </svg>
                     </a>
 
