@@ -7,6 +7,7 @@ import Home from './pages/Home.tsx';
 import NotFound from './pages/NotFound.tsx';
 import Members from './pages/Members.tsx';
 import Competition from "./pages/Competition.tsx";
+import Resources from "./pages/Resources.tsx";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route index element={<Home/>}/>
                 <Route path='/members' element={<Members/>}/>
                 <Route path='/competition' element={<Competition/>}/>
+                <Route path='/resources' element={<Resources/>}/>
                 <Route path='*' element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
