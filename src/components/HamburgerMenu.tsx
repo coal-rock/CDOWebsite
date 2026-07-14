@@ -15,8 +15,8 @@ export default function HamburgerMenu() {
 
     return (
         <>
-            <svg width='96' height='96' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'
-                 className='stroke-white mt-32 mr-16 cursor-pointer' onClick={() => setOpen(true)}>
+            <svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'
+                 className='stroke-white mt-4 mr-8 cursor-pointer' onClick={() => setOpen(true)}>
                 <path d='M7 10H64' stroke-width='4'/>
                 <path d='M7 24H64' stroke-width='4'/>
                 <path d='M7 38H64' stroke-width='4'/>
@@ -46,10 +46,10 @@ export default function HamburgerMenu() {
                         <img
                             src={logo}
                             alt={``}
-                            className='h-60'>
+                            className='h-32'>
                         </img>
                     </Link>
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='white' width='80px' height='80px'
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='white' width='48px' height='48px'
                          viewBox='0 0 16 16'
                          className='mr-8 cursor-pointer'
                          onClick={() => setOpen(false)}>
@@ -60,12 +60,12 @@ export default function HamburgerMenu() {
                 </div>
 
                 <div className='flex flex-col w-full items-center mt-12'>
-                    <div className='flex flex-col gap-16'>
+                    <div className='flex flex-col gap-4'>
                         {routes.map((route, index) => (
                             <Link
                                 to={route[1]}
                                 key={index}
-                                className='text-gray-300 font-medium text-8xl p-2 hover:text-white transition-colors duration-200'
+                                className='text-gray-300 font-medium text-5xl p-2 hover:text-white transition-colors duration-200'
                                 onClick={() => {
                                     window.scrollTo({top: 0, behavior: 'smooth'})
                                     setOpen(false)

@@ -23,34 +23,33 @@ export default function Members() {
         <>
             <Header/>
             <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
-                <div className='flex flex-col items-start w-full gap-6 px-6 pt-8 md:px-12'>
-                    <div className='flex flex-col items-center gap-2 mt-24 mb-24'>
-                        <div className='text-4xl md:text-8xl font-medium text-white leading-tight'>
+                <div className='flex flex-col items-start w-full gap-6 px-4 pt-8'>
+                    <div className='flex flex-col items-center  mt-8 mb-8'>
+                        <div className='text-5xl font-medium text-white leading-tight'>
                             {"Members + Alumni"}
-                            <hr className='w-32 border-2 border-indigo-400 mt-8 mb-8'/>
+                            <hr className='w-16 border border-indigo-400 mt-4 mb-4'/>
                         </div>
                         {/* Text Content */}
-                        <div className='flex flex-col gap-4 text-left mt-2'>
-                            <p className='text-lg md:text-5xl text-white'>
+                        <div className='flex flex-col  text-left'>
+                            <p className='text-lg text-white'>
                                 Meet this year's E-Board, plus the alumni
                                 who held these roles before them.
                             </p>
-                            <p className='text-base md:text-4xl text-stone-300'>
+                            <p className='text-stone-300'>
                                 Many have gone on to roles in pen testing,
                                 SOC analysis, and incident response. Others
                                 took their skills into adjacent fields — security
                                 engineering, cloud, GRC, and beyond
                             </p>
                         </div>
-
                     </div>
 
-                    <div className='flex items-center gap-4 w-full mb-8'>
-                        <h2 className='text-6xl font-medium text-white whitespace-nowrap'>2026-2027 EBoard</h2>
-                        <hr className='flex-grow border-2 border-indigo-400'/>
+                    <div className='flex items-center  w-full'>
+                        <h2 className='text-xl font-medium text-white whitespace-nowrap'>2026-2027 EBoard</h2>
+                        <hr className='flex-grow border-indigo-400'/>
                     </div>
 
-                    <div className='flex flex-col flex-wrap gap-4 justify-center pb-4'>
+                    <div className='flex flex-col flex-wrap  justify-center pb-4'>
                         <BoardCard name='Zoe Winden' position='President' headshot={board.zoe}/>
                         <BoardCard name='Cole Brazinski' position='Vice President' headshot={board.coal}/>
                         <BoardCard name='Samuel Nava' position='Chief Technician' headshot={board.samn}/>
@@ -59,24 +58,24 @@ export default function Members() {
                         <BoardCard name='Jacob McNamara' position='Marketing' headshot={board.nophoto}/>
                     </div>
 
-                    <div className='flex items-center gap-4 w-full'>
-                        <h2 className='text-6xl font-medium text-white whitespace-nowrap'>2026-2027 CBoard</h2>
-                        <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                    <div className='flex items-center  w-full'>
+                        <h2 className='text-xl font-medium text-white whitespace-nowrap'>2026-2027 CBoard</h2>
+                        <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                     </div>
 
-                    <div className='flex flex-col flex-wrap gap-4 justify-center pb-4'>
+                    <div className='flex flex-col flex-wrap  justify-center pb-4'>
                         <BoardCard name='Panos Katsanis' position='Blue Team Captain' headshot={board.panos}/>
                         <BoardCard name='Elijah Williams' position='Blue Team Co-Captain' headshot={board.elijah}/>
                         <BoardCard name='Michael Conaway' position='Red Team Captain' headshot={board.michael}/>
                         <BoardCard name='Isaac Visconti' position='Red Team Co-Captain' headshot={board.nophoto}/>
                     </div>
 
-                    <div className='flex items-center gap-4 w-full'>
-                        <h2 className='text-6xl font-medium text-white whitespace-nowrap'>Alumni</h2>
-                        <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                    <div className='flex items-center  w-full'>
+                        <h2 className='text-xl font-medium text-white whitespace-nowrap'>Alumni</h2>
+                        <hr className='flex-grow border-indigo-400 opacity-50'/>
                     </div>
 
-                    <div className='flex flex-col flex-wrap gap-4 justify-center pb-4'>
+                    <div className='flex flex-col flex-wrap  justify-center pb-4'>
                         <BoardCard name='Dylan Tarace' position='Consultant Engineer' headshot={board.dylan}/>
                         <BoardCard name='Nicholas Coppola' position='Data Center Networks Assistant'
                                    headshot={board.nick}/>

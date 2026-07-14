@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <>
             <header className='sticky top-0 z-50 bg-gray-950 w-full border-b-4 border-indigo-400'>
-                <div className='mx-auto max-w-7xl px-6 h-16 flex items-center justify-between mb-32'>
+                <div className='mx-auto max-w-7xl px-2 h-16 flex items-center justify-between mb-4'>
                     <div className='flex items-center gap-4'>
                         <Link to='/'
                               onClick={() => {
@@ -16,7 +16,7 @@ export default function Header() {
                             <img
                                 src={logo}
                                 alt='CDO Logo'
-                                className='h-60 mt-48'
+                                className='h-32 mt-14'
                             />
                         </Link>
                     </div>

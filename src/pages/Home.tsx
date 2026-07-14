@@ -16,24 +16,24 @@ function Home() {
         <>
             <Header/>
             <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
-                <div className='flex flex-col items-start w-full gap-6 px-6 pt-8 md:px-12'>
+                <div className='flex flex-col items-start w-full gap-6 px-4 pt-8 mt-12'>
 
                     {/* Header & Underline */}
                     <div className='flex flex-col items-start gap-4'>
-                        <h1 className='text-4xl md:text-8xl font-medium text-white leading-tight'>
+                        <h1 className='text-5xl font-medium text-white leading-tight'>
                             Cyber <span className='text-indigo-400'>Defense</span><br/>Organization
                         </h1>
                         {/* The short underline from the reference */}
-                        <hr className='w-32 border-t-4 border-indigo-400'/>
+                        <hr className='w-16 border-t-2 border-indigo-400 mt-2'/>
                     </div>
 
                     {/* Text Content */}
-                    <div className='flex flex-col gap-4 text-left mt-2'>
-                        <p className='text-lg md:text-5xl text-white'>
+                    <div className='flex flex-col gap-4 text-left'>
+                        <p className='text-lg text-white'>
                             Practical cybersecurity experience for UAlbany students through competitions, workshops, and
                             community.
                         </p>
-                        <p className='text-base md:text-4xl text-stone-300'>
+                        <p className='text-base text-stone-300'>
                             Whether you've never touched a terminal or are a seasoned professional, come learn more with
                             us!
                         </p>
@@ -43,11 +43,11 @@ function Home() {
                     <div className='flex flex-col w-full gap-4 mt-4'>
 
                         <button
-                            className='text-3xl flex justify-center items-center gap-2 bg-[#6E4BFF] text-white font-medium py-4 px-6 w-full rounded hover:bg-indigo-500 transition-colors tracking-wide'>
-                            GET INVOLVED <span className='text-5xl -translate-y-1'>&rarr;</span>
+                            className='text-xl flex justify-center items-center gap-2 bg-[#6E4BFF] text-white font-medium py-2 w-full rounded hover:bg-indigo-500 transition-colors tracking-wide'>
+                            GET INVOLVED <span className='text-4xl -translate-y-1'>&rarr;</span>
                         </button>
                         <button
-                            className='text-3xl bg-transparent border border-white text-stone-300 font-medium py-4 px-6 w-full rounded hover:bg-gray-800 transition-colors tracking-wide'>
+                            className='text-xl bg-transparent border border-white text-stone-300 font-medium py-3 w-full rounded hover:bg-gray-800 transition-colors tracking-wide'>
                             SEE WHAT'S HAPPENING
                         </button>
                     </div>
@@ -57,8 +57,8 @@ function Home() {
 
                         {/* Section Header */}
                         <div className='flex items-center gap-4 w-full'>
-                            <h2 className='text-6xl font-medium text-white whitespace-nowrap'>What We Do</h2>
-                            <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                            <h2 className='text-2xl font-medium text-white whitespace-nowrap'>What We Do</h2>
+                            <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                         </div>
 
                         {/* Workshops */}
@@ -71,16 +71,16 @@ function Home() {
                                     <path
                                         d='M13,24H0v-5c0-2.3,1.3-4.4,3.3-5.4C2.5,12.8,2,11.7,2,10.5C2,8,4,6,6.5,6S11,8,11,10.5c0,0.7-0.1,1.3-0.4,1.8 c1.4-0.6,3.4-1.8,5.7-4.1l2-2l1.4,1.4L18.4,9l1.8,1.8l-0.3,0.6c-0.1,0.2-2.4,5.5-6.6,7.2C13.1,18.7,13,18.8,13,19V24z M2,22h9v-3 c0-1,0.6-1.9,1.5-2.3c2.7-1.1,4.6-4.2,5.3-5.5L17,10.4C12.1,15,8.4,15,8,15H6c-2.2,0-4,1.8-4,4V22z M6.5,13C7.9,13,9,11.9,9,10.5 S7.9,8,6.5,8S4,9.1,4,10.5S5.1,13,6.5,13z'/>
                                 </svg>
-                                <h3 className='text-5xl text-white font-medium ml-6'>Workshops</h3>
+                                <h3 className='text-3xl text-white font-medium ml-6'>Workshops</h3>
                             </div>
-                            <p className='text-4xl text-white leading-relaxed'>
+                            <p className='text-xl text-white leading-relaxed'>
                                 We hold weekly workshops during the semester to teach members new security skills.
                             </p>
                             <Link to='/'
-                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-3xl hover:text-white transition-colors mt-2'>
+                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-xl hover:text-white transition-colors mt-2'>
                                 SEE WHAT'S HAPPENING &rarr;
                             </Link>
-                            <hr className='w-1/2 mx-auto border-t-4 border-gray-600 mt-4'/>
+                            <hr className='w-3/4 mx-auto border-t-2 border-gray-600 mt-4'/>
                         </div>
 
                         {/* Community */}
@@ -91,18 +91,18 @@ function Home() {
                                     <path
                                         d='M29.59473,123.19629a4,4,0,0,0,5.60058-.7959,56.0083,56.0083,0,0,1,89.60742-.002c.02344.03076.05274.053.07666.083a3.96225,3.96225,0,0,0,.33887.36767c.07959.07813.15869.15479.24414.2251.04688.03857.083.0852.13233.12207.09131.0686.18945.11963.28418.1792.05713.03564.11181.07446.16992.10693a3.97077,3.97077,0,0,0,.59668.27344c.01953.00684.03711.01709.05664.02368a3.97126,3.97126,0,0,0,.71875.17358c.03467.00489.06982.00391.10449.00806a4.0407,4.0407,0,0,0,.46875.03687c.03272,0,.06445-.01026.09717-.011a4.01382,4.01382,0,0,0,.63867-.07251c.06445-.01221.13037-.01367.19434-.02881a3.99451,3.99451,0,0,0,.812-.28735c.05273-.02564.09912-.06372.15137-.09155a4.02358,4.02358,0,0,0,.51611-.3125c.02539-.019.04346-.04346.06836-.063.07178-.05713.13525-.12549.20361-.188a3.97734,3.97734,0,0,0,.44092-.46094c.02441-.03027.05518-.051.07861-.082a56.0083,56.0083,0,0,1,89.60742-.002,4,4,0,1,0,6.39649-4.80469A63.58068,63.58068,0,0,0,194.69775,94.7522a36,36,0,1,0-37.3955,0A63.34185,63.34185,0,0,0,128,113.69482,63.34,63.34,0,0,0,98.69775,94.7522a36,36,0,1,0-37.3955,0,63.5829,63.5829,0,0,0-32.50342,22.8435A4.00032,4.00032,0,0,0,29.59473,123.19629ZM148,64a28,28,0,1,1,28,28A28.03146,28.03146,0,0,1,148,64ZM52,64A28,28,0,1,1,80,92,28.03146,28.03146,0,0,1,52,64ZM194.69775,198.7522a36,36,0,1,0-37.3955,0A63.34185,63.34185,0,0,0,128,217.69482,63.34,63.34,0,0,0,98.69775,198.7522a36,36,0,1,0-37.3955,0,63.5829,63.5829,0,0,0-32.50342,22.8435,4,4,0,1,0,6.39648,4.80469,56.0083,56.0083,0,0,1,89.60742-.00195c.02344.03076.05274.053.07666.083a3.96225,3.96225,0,0,0,.33887.36767c.07959.07788.15869.15479.24365.22485.04688.03882.0835.08545.13282.12232.09179.06885.19043.12012.28564.17993.05615.0354.11035.07349.168.10571a3.94083,3.94083,0,0,0,.60352.27637c.0166.0061.03222.01489.04931.02075a3.97746,3.97746,0,0,0,.72217.17407c.02978.0044.06055.00342.09082.00733a4.06583,4.06583,0,0,0,.48.0376c.03369,0,.06641-.0105.09961-.01123a3.98954,3.98954,0,0,0,.62354-.071c.06982-.01269.14013-.0144.209-.031a3.94991,3.94991,0,0,0,.80859-.28614c.05567-.02661.1045-.0664.15869-.0957a4.01175,4.01175,0,0,0,.51026-.30859c.02539-.01905.04346-.04346.06836-.063.07178-.05713.13525-.12549.20361-.188a3.97734,3.97734,0,0,0,.44092-.46094c.02441-.03027.05518-.051.07861-.082a56.0083,56.0083,0,0,1,89.60742-.00195,4,4,0,1,0,6.39649-4.80469A63.58068,63.58068,0,0,0,194.69775,198.7522ZM52,168a28,28,0,1,1,28,28A28.03146,28.03146,0,0,1,52,168Zm96,0a28,28,0,1,1,28,28A28.03146,28.03146,0,0,1,148,168Z'/>
                                 </svg>
-                                <h3 className='text-5xl text-white font-medium ml-6'>Community</h3>
+                                <h3 className='text-3xl text-white font-medium ml-6'>Community</h3>
                             </div>
-                            <p className='text-4xl text-white leading-relaxed'>
+                            <p className='text-xl text-white leading-relaxed'>
                                 We’ve built a thriving Discord community that allows members to discuss security and
                                 share
                                 resources.
                             </p>
                             <Link to='/'
-                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-3xl hover:text-white transition-colors mt-2'>
+                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-xl hover:text-white transition-colors mt-2'>
                                 JOIN US ON DISCORD &rarr;
                             </Link>
-                            <hr className='w-1/2 mx-auto border-t-4 border-gray-600 mt-4'/>
+                            <hr className='w-3/4 mx-auto border-t-2 border-gray-600 mt-4'/>
                         </div>
 
                         {/* Competition */}
@@ -119,31 +119,31 @@ function Home() {
                                               d='M7.1,21.9c0,1.1,0.9,2,2,2s2-0.9,2-2s-0.9-2-2-2l0,0c1.1,0,2-0.9,2-2s-0.9-2-2-2s-2,0.9-2,2'/>
                                     </g>
                                 </svg>
-                                <h3 className='text-5xl text-white font-medium ml-6'>Competition</h3>
+                                <h3 className='text-3xl text-white font-medium ml-6'>Competition</h3>
                             </div>
-                            <p className='text-4xl text-white leading-relaxed'>
+                            <p className='text-xl text-white leading-relaxed'>
                                 We attend competitions focusing on red, blue, and purple teaming and even host our own
                                 each
                                 semester!
                             </p>
                             <Link to='/'
-                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-3xl hover:text-white transition-colors mt-2'>
+                                  className='text-[#A5B4FC] font-mono font-bold tracking-widest text-xl hover:text-white transition-colors mt-2'>
                                 LEARN ABOUT GDDC &rarr;
                             </Link>
-                            <hr className='w-1/2 mx-auto border-t-4 border-gray-600 mt-4'/>
+                            <hr className='w-3/4 mx-auto border-t-2 border-gray-600 mt-4'/>
                         </div>
 
                     </div>
                     {/* --- END WHAT WE DO SECTION --- */}
 
                     {/* --- OUR MISSION SECTION --- */}
-                    <div className='flex flex-col w-full mt-16 mb-8 py-20 bg-indigo-100'>
+                    <div className='flex flex-col w-full py-10 bg-indigo-100'>
                         {/* Section Header */}
-                        <div className='flex items-center gap-4 w-full px-4'>
-                            <h2 className='text-5xl font-medium text-black whitespace-nowrap'>Our Mission</h2>
-                            <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                        <div className='flex items-center gap-4 w-full px-2 mb-4'>
+                            <h2 className='text-2xl font-medium text-black whitespace-nowrap'>Our Mission</h2>
+                            <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                         </div>
-                        <p className='text-black font-medium px-4 text-7xl p-4'>
+                        <p className='text-black font-medium px-2 text-3xl'>
                             We are a <span className='text-indigo-400'>student-run</span> organization dedicated to
                             expanding knowledge of <span className='text-indigo-400'>cybersecurity</span> and teaching
                             practical <span className='text-indigo-400'>skills</span> that help students to prepare for
@@ -153,12 +153,12 @@ function Home() {
                     {/* --- END OUR MISSION SECTION --- */}
 
                     {/* --- WHAT'S HAPPENING SECTION --- */}
-                    <div className='flex flex-col w-full mt-16 mb-8'>
+                    <div className='flex flex-col w-full mt-8'>
 
                         {/* Section Header */}
                         <div className='flex items-center gap-4 w-full'>
-                            <h2 className='text-5xl font-medium text-white whitespace-nowrap'>What's Happening</h2>
-                            <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                            <h2 className='text-2xl font-medium text-white whitespace-nowrap'>What's Happening</h2>
+                            <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                         </div>
 
                         <div className='flex flex-col gap-6 w-full mt-8 px-4'>
@@ -173,7 +173,7 @@ function Home() {
                                         strokeLinejoin='round'
                                     />
                                 </svg>
-                                <h3 className='text-4xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
+                                <h3 className='text-xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
                                     18th @ 6:30pm</h3>
                             </div>
                             <div className='flex items-center'>
@@ -187,7 +187,7 @@ function Home() {
                                         strokeLinejoin='round'
                                     />
                                 </svg>
-                                <h3 className='text-4xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
+                                <h3 className='text-xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
                                     18th @ 6:30pm</h3>
                             </div>
                             <div className='flex items-center'>
@@ -214,7 +214,7 @@ function Home() {
                                     </g>
 
                                 </svg>
-                                <h3 className='text-4xl text-white font-light ml-6'>Competition<br/> Wednesday, Jan
+                                <h3 className='text-xl text-white font-light ml-6'>Competition<br/> Wednesday, Jan
                                     18th @ 6:30pm</h3>
                             </div>
                             <div className='flex items-center'>
@@ -228,7 +228,7 @@ function Home() {
                                         strokeLinejoin='round'
                                     />
                                 </svg>
-                                <h3 className='text-4xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
+                                <h3 className='text-xl text-white font-light ml-6'>Weekly Workshop<br/> Wednesday, Jan
                                     18th @ 6:30pm</h3>
                             </div>
                         </div>
@@ -236,19 +236,19 @@ function Home() {
                     {/* --- END WHAT'S HAPPENING SECTION --- */}
 
                     {/* --- WHAT'S GDDC SECTION --- */}
-                    <div className='flex flex-col w-full mt-16 mb-8 py-20'>
+                    <div className='flex flex-col w-full mb-8 py-20'>
                         {/* Section Header */}
-                        <div className='flex items-center gap-4 w-full px-4  text-white'>
-                            <h2 className='text-5xl font-medium whitespace-nowrap'>What's GDDC?</h2>
-                            <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                        <div className='flex items-center gap-4 w-full px-4 text-white'>
+                            <h2 className='text-xl font-medium whitespace-nowrap'>What's GDDC?</h2>
+                            <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                         </div>
-                        <p className='font-medium px-4 text-4xl p-4  text-white'>
+                        <p className='font-medium px-4 text-xl p-4  text-white'>
                             The Great Dane Defense Competition
                             (GDDC) is a defensive security
                             competition hosted by UAlbany CDO.
 
                         </p>
-                        <p className='font-light px-4 text-4xl p-4 text-stone-300'>
+                        <p className='font-light px-4 text-xl p-4 text-stone-300'>
                             Competitors operate a simulated environment
                             and defend against red-team adversaries
                             attempting to hinder their operations and
@@ -258,8 +258,8 @@ function Home() {
                             operations.
                         </p>
                         <button
-                            className='text-2xl bg-transparent border-indigo-200 border-4 text-indigo-200 font-bold py-3 px-6 w-1/2 rounded hover:bg-gray-800 transition-colors tracking-wide'>
-                            SEE US IN ACTION! <span className='text-3xl -translate-y-1'>&rarr;</span>
+                            className='text-xl bg-transparent border-indigo-200 border-2 text-indigo-200 font-medium py-1 w-3/4 rounded hover:bg-gray-800 transition-colors tracking-wide'>
+                            SEE US IN ACTION! <span className='text-2xl -translate-y-1'>&rarr;</span>
                         </button>
                     </div>
                     {/* --- END WHAT'S GDDC SECTION --- */}
@@ -270,21 +270,21 @@ function Home() {
                     />
 
                     {/* --- JOIN US SECTION --- */}
-                    <div className='flex flex-col w-full mt-16 mb-8 py-20'>
+                    <div className='flex flex-col w-full py-10'>
                         {/* Section Header */}
                         <div className='flex items-center gap-4 w-full px-4'>
-                            <h2 className='text-5xl font-medium whitespace-nowrap text-white'>Join Us!</h2>
-                            <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
+                            <h2 className='text-4xl font-medium whitespace-nowrap text-white'>Join Us!</h2>
+                            <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
                         </div>
-                        <p className='font-medium px-4 text-4xl p-4 text-stone-300'>
+                        <p className='font-medium px-4 text-xl p-4 text-stone-300'>
                             Stop by one of our workshops, join our
                             Discord community, or reach out to us on
                             Instagram. We’re happy to have you!
                         </p>
 
                         <button
-                            className='text-3xl flex justify-center items-center gap-2 bg-[#6E4BFF] text-white font-medium py-4 px-6 w-full rounded hover:bg-indigo-500 transition-colors tracking-wide'>
-                            GET INVOLVED <span className='text-5xl -translate-y-1'>&rarr;</span>
+                            className='text-xl flex justify-center items-center gap-2 py-2 bg-[#6E4BFF] text-white font-medium w-full rounded hover:bg-indigo-500 transition-colors tracking-wide'>
+                            GET INVOLVED <span className='text-xl -translate-y-1'>&rarr;</span>
                         </button>
                     </div>
                     {/* --- END JOIN US SECTION --- */}
