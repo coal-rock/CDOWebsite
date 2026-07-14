@@ -18,13 +18,13 @@ export default function Resources() {
 
     return (
         <>
-            <Header/>
-            <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
-                <div className='flex flex-col items-start w-full gap-6 px-6 pt-32 md:px-12 pb-32'>
+            <div className='min-h-screen bg-gray-950 flex flex-col w-full'>
+                <Header/>
+                <div className='flex-grow flex flex-col items-start w-full gap-6 px-6 pt-12 pb-32'>
 
                     {/* Header & Underline */}
                     <div className='flex flex-col items-start gap-4 pb-8'>
-                        <h1 className='text-4xl md:text-8xl font-medium text-white leading-tight pb-8'>
+                        <h1 className='text-4xl md:text-8xl font-medium text-white leading-tight'>
                             Helpful
                             Resources
                         </h1>
@@ -49,7 +49,7 @@ export default function Resources() {
                             use them responsibly.
                         </p>
                     </div>
-                    <AccordionMenu items={resourceTopics} />
+                    <AccordionMenu items={resourceTopics}/>
                 </div>
                 <Footer/>
             </div>

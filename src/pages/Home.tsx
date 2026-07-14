@@ -238,17 +238,17 @@ function Home() {
                     {/* --- WHAT'S GDDC SECTION --- */}
                     <div className='flex flex-col w-full mt-16 mb-8 py-20'>
                         {/* Section Header */}
-                        <div className='flex items-center gap-4 w-full px-4'>
+                        <div className='flex items-center gap-4 w-full px-4  text-white'>
                             <h2 className='text-5xl font-medium whitespace-nowrap'>What's GDDC?</h2>
                             <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
                         </div>
-                        <p className='font-medium px-4 text-4xl p-4'>
+                        <p className='font-medium px-4 text-4xl p-4  text-white'>
                             The Great Dane Defense Competition
                             (GDDC) is a defensive security
                             competition hosted by UAlbany CDO.
 
                         </p>
-                        <p className='font-light px-4 text-4xl p-4'>
+                        <p className='font-light px-4 text-4xl p-4 text-stone-300'>
                             Competitors operate a simulated environment
                             and defend against red-team adversaries
                             attempting to hinder their operations and
@@ -273,10 +273,10 @@ function Home() {
                     <div className='flex flex-col w-full mt-16 mb-8 py-20'>
                         {/* Section Header */}
                         <div className='flex items-center gap-4 w-full px-4'>
-                            <h2 className='text-5xl font-medium whitespace-nowrap'>Join Us!</h2>
+                            <h2 className='text-5xl font-medium whitespace-nowrap text-white'>Join Us!</h2>
                             <hr className='flex-grow border-t-4 border-indigo-400 opacity-50'/>
                         </div>
-                        <p className='font-medium px-4 text-4xl p-4'>
+                        <p className='font-medium px-4 text-4xl p-4 text-stone-300'>
                             Stop by one of our workshops, join our
                             Discord community, or reach out to us on
                             Instagram. We’re happy to have you!
