@@ -1,26 +1,39 @@
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
+import AccordionMenu from "../components/AccordionMenu.tsx";
 
-function Competition() {
+export default function Resources() {
+
+    const resourceTopics = [
+        'Certifications',
+        'Cloud Security',
+        'Defense/Blue-Teaming',
+        'Digital Forensics',
+        'Incident Response',
+        'General IT Security',
+        'Malware Analysis',
+        'Pen Testing/Red-Teaming',
+        'Threat Intelligence'
+    ]
 
     return (
         <>
             <Header/>
             <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
-                <div className='flex flex-col items-start w-full gap-6 px-6 pt-8 md:px-12'>
+                <div className='flex flex-col items-start w-full gap-6 px-6 pt-32 md:px-12 pb-32'>
 
                     {/* Header & Underline */}
-                    <div className='flex flex-col items-start gap-4'>
-                        <h1 className='text-4xl md:text-8xl font-medium text-white leading-tight'>
+                    <div className='flex flex-col items-start gap-4 pb-8'>
+                        <h1 className='text-4xl md:text-8xl font-medium text-white leading-tight pb-8'>
                             Helpful
                             Resources
                         </h1>
                         {/* The short underline from the reference */}
-                        <hr className='w-32 border-t-4 border-indigo-400'/>
+                        <hr className='w-32 border-t-2 border-indigo-400'/>
                     </div>
 
                     {/* Text Content */}
-                    <div className='flex flex-col gap-4 text-left mt-2'>
+                    <div className='flex flex-col gap-4 text-left mt-2 pb-24'>
                         <p className='text-lg md:text-5xl text-white'>
                             Whether you're looking to study for a
                             certification or brush up on some
@@ -36,7 +49,7 @@ function Competition() {
                             use them responsibly.
                         </p>
                     </div>
-
+                    <AccordionMenu items={resourceTopics} />
                 </div>
                 <Footer/>
             </div>
@@ -44,4 +57,3 @@ function Competition() {
     )
 }
 
-export default Competition;
