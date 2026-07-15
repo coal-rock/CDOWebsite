@@ -21,14 +21,12 @@ export default function Resources() {
             <Header/>
             <div className='min-h-screen bg-gray-950 flex flex-col w-full'>
                 <div className='flex-grow flex flex-col items-start w-full px-4 pt-12'>
-
-                    {/* Header & Underline */}
+                    {/* Page Title & Underline */}
                     <div className='flex flex-col items-start'>
                         <h1 className='text-5xl font-medium text-white leading-tight'>
                             Helpful
                             Resources
                         </h1>
-                        {/* The short underline from the reference */}
                         <hr className='w-16 border-indigo-400 mt-4 mb-4'/>
                     </div>
 

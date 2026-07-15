@@ -1,25 +1,28 @@
-import Header from "../components/Header.tsx";
-import Footer from "../components/Footer.tsx";
+import Header from '../components/Header.tsx'
+import Footer from '../components/Footer.tsx'
 
-function Competition() {
+export default function Competition() {
 
     // Grab all the .jpg files in the competition folder
-    const images = import.meta.glob('../assets/competition/*.jpg', {eager: true, as: 'url'});
-    // Convert that raw data object into an array of images
-    const imagesUrls = Object.values(images);
+    const images = import.meta.glob('../assets/competition/*.jpg', {
+        eager: true,
+        query: '?url',
+        import: 'default'
+    })
+    // Convert that raw data into an array of images
+    const imagesUrls = Object.values(images)
 
     return (
         <>
             <Header/>
-            <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
+            <div className='min-h-screen bg-gray-950 flex flex-col w-full'>
                 <div className='flex flex-col items-start w-full gap-6 px-4 pt-8'>
 
-                    {/* Header & Underline */}
-                    <div className='flex flex-col items-start gap-4'>
+                    {/* Page Title & Underline */}
+                    <div className='flex-grow flex-col items-start gap-4'>
                         <h1 className='text-5xl font-medium text-white leading-tight'>
                             Compete in GDDC
                         </h1>
-                        {/* The short underline from the reference */}
                         <hr className='w-16 border-indigo-400'/>
                     </div>
 
@@ -54,7 +57,7 @@ function Competition() {
                         {imagesUrls.map((url, index) => (
                             <img
                                 key={index}
-                                src={url}
+                                src={url as string}
                                 alt={`GDDC Competition Photo ${index + 1}`}
                                 className='w-full h-auto rounded-xl border-2 border-indigo-900/50'
                             />
@@ -66,5 +69,3 @@ function Competition() {
         </>
     )
 }
-
-export default Competition;

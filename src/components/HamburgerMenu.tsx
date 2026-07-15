@@ -7,14 +7,27 @@ export default function HamburgerMenu() {
     const [open, setOpen] = useState(false);
 
     const routes = [
-        ["menu", "/"],
-        ["members", "/members"],
-        ["resources", "/resources"],
-        ["competition", "/competition"],
-    ];
+        {
+            name: 'menu',
+            path: '/'
+        },
+        {
+            name: 'members',
+            path: '/members'
+        },
+        {
+            name: 'resources',
+            path: '/resources'
+        },
+        {
+            name: 'competition',
+            path: '/competition'
+        }
+    ]
 
     return (
         <>
+            {/* Menu Opening Button */}
             <svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'
                  className='stroke-white mt-4 mr-8 cursor-pointer' onClick={() => setOpen(true)}>
                 <path d='M7 10H64' stroke-width='4'/>
@@ -22,6 +35,7 @@ export default function HamburgerMenu() {
                 <path d='M7 38H64' stroke-width='4'/>
             </svg>
 
+            {/* Menu Sliding Backdrop */}
             <div
                 className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity duration-300 
                 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
@@ -32,6 +46,7 @@ export default function HamburgerMenu() {
                 className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-gray-950 shadow-lg transform transition-transform duration-300 
                 ${open ? "translate-x-0" : "translate-x-full"}`}
             >
+                {/* Logo as Home Button */}
                 <div className='flex flex-row w-full items-center justify-between'>
                     <Link to='/'
                           className=''
@@ -49,6 +64,7 @@ export default function HamburgerMenu() {
                             className='h-32'>
                         </img>
                     </Link>
+                    {/* Menu Closing Button */}
                     <svg xmlns='http://www.w3.org/2000/svg' fill='white' width='48px' height='48px'
                          viewBox='0 0 16 16'
                          className='mr-8 cursor-pointer'
@@ -59,11 +75,12 @@ export default function HamburgerMenu() {
                     </svg>
                 </div>
 
+                {/* Menu Options */}
                 <div className='flex flex-col w-full items-center mt-12'>
                     <div className='flex flex-col gap-4'>
                         {routes.map((route, index) => (
                             <Link
-                                to={route[1]}
+                                to={route.path}
                                 key={index}
                                 className='text-gray-300 font-medium text-5xl p-2 hover:text-white transition-colors duration-200'
                                 onClick={() => {
@@ -71,8 +88,8 @@ export default function HamburgerMenu() {
                                     setOpen(false)
                                 }}
                             >
-                                <p className={(location.pathname == route[1]) ? "text-indigo-400" : ""}>
-                                    <span className='text-yellow-400'>/</span> {route[0]}
+                                <p className={(location.pathname == route.path) ? "text-indigo-400" : ""}>
+                                    <span className='text-yellow-400'>/</span>{route.name}
                                 </p>
                             </Link>
                         ))}

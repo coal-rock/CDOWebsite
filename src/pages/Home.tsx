@@ -1,29 +1,22 @@
-import Header from '../components/Header';
 import {Link} from 'react-router';
-// import Card from '../components/Card';
-//
-// import hero from '../assets/hero.png';
-// import workshop from '../assets/workshop.png'
-// import community from '../assets/community.png'
-// import competition from '../assets/competition.png'
 
-import gddc2026 from '../assets/community.jpg'
+import Header from '../components/Header';
 import Footer from "../components/Footer.tsx";
 
+import gddc2026 from '../assets/community.jpg'
 
-function Home() {
+export default function Home() {
     return (
         <>
             <Header/>
             <div className='flex flex-col w-full h-full items-start bg-gray-950 overflow-y-scroll'>
-                <div className='flex flex-col items-start w-full gap-6 px-4 pt-8 mt-12'>
+                <div className='flex flex-col items-start w-full gap-6 px-3 pt-8 mt-12'>
 
                     {/* Header & Underline */}
                     <div className='flex flex-col items-start gap-4'>
                         <h1 className='text-5xl font-medium text-white leading-tight'>
                             Cyber <span className='text-indigo-400'>Defense</span><br/>Organization
                         </h1>
-                        {/* The short underline from the reference */}
                         <hr className='w-16 border-t-2 border-indigo-400 mt-2'/>
                     </div>
 
@@ -294,5 +287,3 @@ function Home() {
         </>
     );
 }
-
-export default Home;

@@ -1,10 +1,12 @@
 import Header from "../components/Header";
-import BoardCard from "../components/BoardCard";
 import Footer from "../components/Footer.tsx";
+import BoardCard from "../components/BoardCard";
 
 const loadBoard = () => {
     const images = import.meta.glob("../assets/board/*", {
         eager: true,
+        // query: '?url',
+        // import: 'default'
     });
 
     return Object.fromEntries(
