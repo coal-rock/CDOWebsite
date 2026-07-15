@@ -2,25 +2,51 @@ import Header from "../components/Header";
 import Footer from "../components/Footer.tsx";
 import BoardCard from "../components/BoardCard";
 
-const loadBoard = () => {
-    const images = import.meta.glob("../assets/board/*", {
-        eager: true,
-        // query: '?url',
-        // import: 'default'
-    });
-
-    return Object.fromEntries(
-        Object.entries(images).map(([path, module]) => {
-            const fileName = path.split('/').pop()!.replace(".png", "").replace(".jpg", "");
-            return [fileName, (module as { default: string }).default];
-        })
-    );
-};
-
-const board = loadBoard();
-console.log(board);
-
 export default function Members() {
+
+    const loadBoard = () => {
+        const images = import.meta.glob("../assets/board/*", {
+            eager: true,
+            query: '?url',
+            import: 'default'
+        });
+
+        return Object.fromEntries(
+            Object.entries(images).map(([path, module]) => {
+                const fileName = path.split('/').pop()!.replace(".png", "").replace(".jpg", "");
+                return [fileName, module as string];
+            })
+        );
+    };
+
+    const board = loadBoard();
+
+    const eBoardMembers = [
+        {name: 'Zoe Winden', position: 'President', headshot: board.zoe},
+        {name: 'Cole Brazinski', position: 'Vice President', headshot: board.coal},
+        {name: 'Samuel Nava', position: 'Chief Technician', headshot: board.samn},
+        {name: 'Mesyah Thomas-Harvey', position: 'Treasurer', headshot: board.mesyah},
+        {name: 'Xavier Daniel', position: 'Secretary', headshot: board.xavier},
+        {name: 'Jacob McNamara', position: 'Marketing', headshot: board.nophoto}
+    ]
+
+    const cBoardMembers = [
+        {name: 'Panos Katsanis', position: 'Blue Team Captain', headshot: board.panos},
+        {name: 'Elijah Williams', position: 'Blue Team Co-Captain', headshot: board.elijah},
+        {name: 'Michael Conaway', position: 'Red Team Captain', headshot: board.michael},
+        {name: 'Isaac Visconti', position: 'Red Team Co-Captain', headshot: board.nophoto}
+    ]
+
+    const alumniMembers = [
+        {name: 'Dylan Tarace', position: 'Consultant Engineer', headshot: board.dylan},
+        {name: 'Nicholas Coppola', position: 'Data Center Networks Assistant', headshot: board.nick},
+        {name: 'Matthew Waskiewicz', position: 'Enterprise Network Services Assistant', headshot: board.matt},
+        {name: 'Roberto Friedlander', position: 'IT Security Analyst', headshot: board.berto},
+        {name: 'Jonathan Edwards', position: 'Information Security Intern', headshot: board.jon},
+        {name: 'Tyler Barnes', position: 'Cybersecurity Intern', headshot: board.tyler},
+        {name: 'Sean Bartoszewicz', position: 'Hardware Services Technician', headshot: board.sean}
+    ]
+
     return (
         <>
             <Header/>
@@ -46,48 +72,49 @@ export default function Members() {
                         </div>
                     </div>
 
+                    {/* EBoard */}
                     <div className='flex items-center  w-full'>
                         <h2 className='text-xl font-medium text-white whitespace-nowrap'>2026-2027 EBoard</h2>
                         <hr className='flex-grow border-indigo-400'/>
                     </div>
-
-                    <div className='flex flex-col flex-wrap  justify-center pb-4'>
-                        <BoardCard name='Zoe Winden' position='President' headshot={board.zoe}/>
-                        <BoardCard name='Cole Brazinski' position='Vice President' headshot={board.coal}/>
-                        <BoardCard name='Samuel Nava' position='Chief Technician' headshot={board.samn}/>
-                        <BoardCard name='Mesyah Thomas-Harvey' position='Treasurer' headshot={board.mesyah}/>
-                        <BoardCard name='Xavier Daniel' position='Secretary' headshot={board.xavier}/>
-                        <BoardCard name='Jacob McNamara' position='Marketing' headshot={board.nophoto}/>
+                    <div className='flex flex-col flex-wrap justify-center pb-4'>
+                        {eBoardMembers.map((member, index) => (
+                            <BoardCard key={index}
+                                       name={member.name}
+                                       position={member.position}
+                                       headshot={member.headshot}
+                            />
+                        ))}
                     </div>
 
+                    {/* CBoard */}
                     <div className='flex items-center  w-full'>
                         <h2 className='text-xl font-medium text-white whitespace-nowrap'>2026-2027 CBoard</h2>
-                        <hr className='flex-grow border-t-2 border-indigo-400 opacity-50'/>
+                        <hr className='flex-grow border-indigo-400 opacity-50'/>
+                    </div>
+                    <div className='flex flex-col flex-wrap justify-center pb-4'>
+                        {cBoardMembers.map((member, index) => (
+                            <BoardCard key={index}
+                                       name={member.name}
+                                       position={member.position}
+                                       headshot={member.headshot}
+                            />
+                        ))}
                     </div>
 
-                    <div className='flex flex-col flex-wrap  justify-center pb-4'>
-                        <BoardCard name='Panos Katsanis' position='Blue Team Captain' headshot={board.panos}/>
-                        <BoardCard name='Elijah Williams' position='Blue Team Co-Captain' headshot={board.elijah}/>
-                        <BoardCard name='Michael Conaway' position='Red Team Captain' headshot={board.michael}/>
-                        <BoardCard name='Isaac Visconti' position='Red Team Co-Captain' headshot={board.nophoto}/>
-                    </div>
-
+                    {/* Alumni */}
                     <div className='flex items-center  w-full'>
                         <h2 className='text-xl font-medium text-white whitespace-nowrap'>Alumni</h2>
                         <hr className='flex-grow border-indigo-400 opacity-50'/>
                     </div>
-
                     <div className='flex flex-col flex-wrap  justify-center pb-4'>
-                        <BoardCard name='Dylan Tarace' position='Consultant Engineer' headshot={board.dylan}/>
-                        <BoardCard name='Nicholas Coppola' position='Data Center Networks Assistant'
-                                   headshot={board.nick}/>
-                        <BoardCard name='Matthew Waskiewicz' position='Enterprise Network Services Assistant'
-                                   headshot={board.matt}/>
-                        <BoardCard name='Roberto Friedlander' position='IT Security Analyst' headshot={board.berto}/>
-                        <BoardCard name='Jonathan Edwards' position='Information Security Intern' headshot={board.jon}/>
-                        <BoardCard name='Tyler Barnes' position='Cyber Security Intern' headshot={board.tyler}/>
-                        <BoardCard name='Sean Bartoszewicz' position='Hardware Services Technician'
-                                   headshot={board.sean}/>
+                        {alumniMembers.map((member, index) => (
+                            <BoardCard key={index}
+                                       name={member.name}
+                                       position={member.position}
+                                       headshot={member.headshot}
+                            />
+                        ))}
                     </div>
                 </div>
                 <Footer/>
