@@ -8,7 +8,7 @@ function AccordionItem({title}: { title: string }) {
             <div className='border-b border-indigo-300'>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className='w-full flex justify-between items-center py-4 text-white font-medium text-xl hover:text-indigo-300 transition-colors text-left'
+                    className='w-full flex justify-between items-center py-4 font-medium text-xl hover:text-indigo-300 transition-colors text-left'
                 >
                     {title}
                     <svg

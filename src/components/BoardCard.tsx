@@ -1,8 +1,14 @@
-export default function BoardCard({name, position, headshot}: { name: string, position: string, headshot: string }) {
+interface BoardCardProps {
+    name: string
+    position: string
+    headshot: string
+}
+
+export default function BoardCard({name, position, headshot}: BoardCardProps) {
     return (
         <>
             <div
-                className='flex flex-row items-center w-full bg-gray-950 border rounded-lg border-indigo-400/60 p-2 gap-4 mb-4'>
+                className='flex flex-row items-center w-full border rounded-lg border-indigo-400/60 p-2 gap-4 mb-4'>
                 {/* Image */}
                 <img
                     src={headshot}
@@ -12,7 +18,7 @@ export default function BoardCard({name, position, headshot}: { name: string, po
                 {/* Text Content */}
                 <div
                     className='flex flex-col justify-center text-left'>
-                    <div className='text-l text-white font-bold'>
+                    <div className='text-l font-bold'>
                         {name}
                     </div>
                     <div className='text-l text-stone-300'>

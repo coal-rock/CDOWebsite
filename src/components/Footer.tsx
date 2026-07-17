@@ -1,4 +1,9 @@
-function FooterItem({link, svg}: { link: string, svg: React.ReactNode }) {
+interface FooterItemProps {
+    link: string
+    svg: React.ReactNode
+}
+
+function FooterItem({link, svg}: FooterItemProps) {
     return (
         <a href={link}
            target='_blank'

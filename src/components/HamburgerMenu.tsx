@@ -30,20 +30,20 @@ export default function HamburgerMenu() {
             {/* Menu Opening Button */}
             <svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'
                  className='stroke-white mt-4 mr-8 cursor-pointer' onClick={() => setOpen(true)}>
-                <path d='M7 10H64' stroke-width='4'/>
-                <path d='M7 24H64' stroke-width='4'/>
-                <path d='M7 38H64' stroke-width='4'/>
+                <path d='M7 10H64' strokeWidth='4'/>
+                <path d='M7 24H64' strokeWidth='4'/>
+                <path d='M7 38H64' strokeWidth='4'/>
             </svg>
 
             {/* Menu Sliding Backdrop */}
             <div
-                className={`fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity duration-300 
+                className={`fixed inset-0 z-40 backdrop-blur-sm transition-opacity duration-300 
                 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                 onClick={() => setOpen(false)}
             />
 
             <div
-                className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-gray-950 shadow-lg transform transition-transform duration-300 
+                className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-base shadow-lg transform transition-transform duration-300 
                 ${open ? "translate-x-0" : "translate-x-full"}`}
             >
                 {/* Logo as Home Button */}
@@ -71,7 +71,7 @@ export default function HamburgerMenu() {
                          onClick={() => setOpen(false)}>
                         <path
                             d='M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z'
-                            fill-rule='evenodd'/>
+                            fillRule='evenodd'/>
                     </svg>
                 </div>
 
