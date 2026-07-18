@@ -1,20 +1,9 @@
-import AccordionMenu from "../components/AccordionMenu.tsx";
 import PageLayout from "../components/PageLayout.tsx";
+import AccordionMenu from "../components/AccordionMenu.tsx";
+
+import {resourceTopics} from "../data/resourcesData.tsx";
 
 export default function Resources() {
-
-    const resourceTopics = [
-        'Certifications',
-        'Cloud Security',
-        'Defense/Blue-Teaming',
-        'Digital Forensics',
-        'Incident Response',
-        'General IT Security',
-        'Malware Analysis',
-        'Pen Testing/Red-Teaming',
-        'Threat Intelligence'
-    ]
-
     return (
         <PageLayout>
             <div className='flex-grow flex flex-col items-start w-full px-4 pt-12'>

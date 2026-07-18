@@ -1,30 +1,12 @@
-import {useState} from "react";
 import {Link} from "react-router";
+import {useState} from "react";
+
+import {routes} from "../data/navigationData.tsx";
 
 import logo from "../assets/logo.png";
 
 export default function HamburgerMenu() {
     const [open, setOpen] = useState(false);
-
-    const routes = [
-        {
-            name: 'menu',
-            path: '/'
-        },
-        {
-            name: 'members',
-            path: '/members'
-        },
-        {
-            name: 'resources',
-            path: '/resources'
-        },
-        {
-            name: 'competition',
-            path: '/competition'
-        }
-    ]
-
     return (
         <>
             {/* Menu Opening Button */}
