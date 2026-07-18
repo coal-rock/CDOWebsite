@@ -37,5 +37,4 @@ export const alumniMembers = [
     {name: 'Roberto Friedlander', position: 'IT Security Analyst', headshot: board.berto},
     {name: 'Jonathan Edwards', position: 'Information Security Intern', headshot: board.jon},
     {name: 'Tyler Barnes', position: 'Cybersecurity Intern', headshot: board.tyler},
-    {name: 'Sean Bartoszewicz', position: 'Hardware Services Technician', headshot: board.sean}
 ]

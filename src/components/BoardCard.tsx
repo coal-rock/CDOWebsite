@@ -8,7 +8,7 @@ export default function BoardCard({name, position, headshot}: BoardCardProps) {
     return (
         <>
             <div
-                className='flex flex-row items-center w-full border rounded-lg border-indigo-400/60 p-2 gap-4 mb-4'>
+                className='flex flex-row items-center w-full border rounded-lg border-indigo-400/60 p-2 gap-4'>
                 {/* Image */}
                 <img
                     src={headshot}
