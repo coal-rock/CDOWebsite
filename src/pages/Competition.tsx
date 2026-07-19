@@ -29,7 +29,7 @@ export default function Competition() {
                     tasks throughout the competition that reflect
                     real-world business operations.
                 </p>
-                <div className='w-full md:w-1/3 mt-6 mx-auto'>
+                <div className='w-full max-w-sm space-y-6 mt-6 mx-auto'>
                     <Button text='REGISTER FOR FALL 2026' variant='primary' showArrow to={window.location.pathname}/>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-4'>

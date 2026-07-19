@@ -21,7 +21,7 @@ export default function FeatureBlock({title, description, linkText, linkUrl, ico
             </p>
             <Link to={linkUrl}
                   onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                  className='inline-flex items-center gap-2 text-indigo-400 font-mono font-bold tracking-widest text-lg md:text-xl hover:text-white transition-colors mt-2'
+                  className='whitespace-nowrap inline-flex items-center gap-2 text-indigo-400 font-mono font-bold tracking-widest text-lg md:text-xl hover:text-white transition-colors mt-2'
             >
                 {linkText}
                 <svg xmlns='http://www.w3.org/2000/svg' width='30px' height='30px' viewBox='0 0 24 24' fill='none'>

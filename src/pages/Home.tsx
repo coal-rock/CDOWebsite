@@ -26,7 +26,7 @@ export default function Home() {
                     Whether you've never touched a terminal or are a seasoned professional, come learn more with
                     us!
                 </p>
-                <div className='w-full md:w-1/3 space-y-6 mt-6 mx-auto'>
+                <div className='w-full max-w-sm space-y-6 mt-6 mx-auto'>
                     <Button text='GET INVOLVED' variant='primary' showArrow to={window.location.pathname}/>
                     <Button text="SEE WHAT'S HAPPENING" variant='outline' showArrow to={window.location.pathname}/>
                 </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
             {/* --- WHAT WE DO SECTION --- */}
             <Section title='What We Do'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 w-full'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full'>
                     {featuresData.map((feature, index) => (
                         <FeatureBlock
                             key={index}
@@ -67,7 +67,7 @@ export default function Home() {
 
             {/* --- WHAT'S HAPPENING SECTION --- */}
             <Section title="What's Happening">
-                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 w-full'>
                     {eventsData.map((event, index) => (
                         <EventItem
                             key={index}
