@@ -20,7 +20,7 @@ export const featuresData = [
         title: "Community",
         description: "We've built a thriving Discord community that allows members to discuss security and share resources.",
         linkText: "JOIN US ON DISCORD",
-        linkUrl: "/",
+        linkUrl: "https://discord.gg/4cMyjj5Xq",
         icon: (
             <svg fill='currentColor' width='80px' height='80px' viewBox='0 0 256 256'
                  className='text-white shrink-0'>
@@ -33,7 +33,7 @@ export const featuresData = [
         title: "Competition",
         description: "We attend competitions focusing on red, blue, and purple teaming and even host our own each semester!",
         linkText: "LEARN ABOUT GDDC",
-        linkUrl: "/",
+        linkUrl: "/competition",
         icon: (
             <svg width='80' height='80' viewBox='0 0 65 30' fill='none' className='text-white shrink-0'>
                 <g transform='translate(1.000000, 1.000000)'>

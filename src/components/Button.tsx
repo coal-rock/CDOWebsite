@@ -37,8 +37,8 @@ export default function Button({text, variant = 'primary', icon, showArrow, to, 
         return (
             <Link
                 to={to}
-                className={finalStyles}
                 onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                className={finalStyles}
             >
                 {innerContent}
             </Link>
