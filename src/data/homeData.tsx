@@ -52,7 +52,7 @@ export const featuresData = [
 export const eventsData = [
     {
         title: "Weekly Workshop",
-        date: "Wednesday, Jan 18th @ 6:30pm",
+        date: <>Wednesday, Jan 18th <br/> @ 6:30pm</>,
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none'
                  className='text-white shrink-0'>
@@ -64,7 +64,7 @@ export const eventsData = [
     },
     {
         title: "Competition",
-        date: "Wednesday, Jan 18th @ 6:30pm",
+        date: <>Wednesday, Jan 18th <br/> @ 6:30pm</>,
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24'
                  className='text-white shrink-0'>
@@ -79,7 +79,7 @@ export const eventsData = [
     },
     {
         title: "Weekly Workshop",
-        date: "Wednesday, Jan 18th @ 6:30pm",
+        date: <>Wednesday, Jan 18th <br/> @ 6:30pm</>,
         icon: (
             <svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24' fill='none'
                  className='text-white shrink-0'>

@@ -2,7 +2,7 @@ import React from 'react'
 
 interface EventProps {
     title: string
-    date: string
+    date: React.ReactNode
     icon: React.ReactNode
 }
 
