@@ -25,7 +25,7 @@ export default function HamburgerMenu() {
             />
 
             <div
-                className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-base shadow-lg transform transition-transform duration-300 
+                className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-gray-950 shadow-lg transform transition-transform duration-300 
                 ${open ? "translate-x-0" : "translate-x-full"}`}
             >
                 {/* Logo as Home Button */}

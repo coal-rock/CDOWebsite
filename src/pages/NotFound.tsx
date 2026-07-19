@@ -5,7 +5,7 @@ function NotFound() {
         <>
             <Header />
             <div className="flex flex-col w-full items-center">
-                not found twin
+                ts not found twin🥀
             </div>
         </>
     );

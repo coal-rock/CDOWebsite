@@ -1,14 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-    --color-brand: #6E4BFF;
-    --color-brand-hover: #5839db;
-
-    --color-accent: var(--color-indigo-400);
-
-    --color-base: var(--color-gray-950);
-}
-
 body {
-    @apply bg-base text-white;
+    @apply text-white;
 }

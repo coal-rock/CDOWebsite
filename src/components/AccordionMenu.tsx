@@ -5,10 +5,10 @@ function AccordionItem({title}: { title: string }) {
 
     return (
         <>
-            <div className='border-b border-indigo-300'>
+            <div className='border-b border-indigo-400'>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className='w-full flex justify-between items-center py-4 font-medium text-xl hover:text-indigo-300 transition-colors text-left'
+                    className='text-xl md:text-2xl font-medium text-left w-full flex justify-between items-center py-4 hover:text-indigo-400 transition-colors cursor-pointer'
                 >
                     {title}
                     <svg
@@ -22,7 +22,7 @@ function AccordionItem({title}: { title: string }) {
                     </svg>
                 </button>
                 {isOpen && (
-                    <div className='pb-4 text-stone-300 text-lg'>
+                    <div className='text-sm md:text-lg pb-4 text-stone-300'>
                         Placeholder content for {title}
                     </div>
                 )}

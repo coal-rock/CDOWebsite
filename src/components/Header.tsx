@@ -4,12 +4,10 @@ import logo from '../assets/logo.png'
 import {routes} from "../data/navigationData.tsx";
 
 export default function Header() {
-
     const location = useLocation()
-
     return (
         <>
-            <header className='sticky top-0 z-50 bg-base w-full border-b-4 border-indigo-400'>
+            <header className='sticky top-0 z-50 bg-gray-950 w-full border-b-4 border-indigo-400'>
 
                 <div className='mx-auto max-w-7xl px-4 h-16 flex items-center justify-between mb-4'>
 
@@ -38,8 +36,8 @@ export default function Header() {
                                     key={index}
                                     to={route.path}
                                     onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                                    className={`text-lg font-medium tracking-wider uppercase transition-colors duration-200 hover:text-white
-                                        ${isActive ? 'text-indigo-400' : 'text-gray-400'}`}
+                                    className={`text-lg md:text-xl font-medium tracking-wider uppercase transition-colors duration-200 hover:text-white
+                                        ${isActive ? 'text-indigo-400' : 'text-stone-300'}`}
                                 >
                                     {route.name == 'menu' ? 'home' : route.name}
                                 </Link>
