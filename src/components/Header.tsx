@@ -1,22 +1,22 @@
-import {Link, useLocation} from "react-router"
+import { Link, useLocation } from "react-router"
 import HamburgerMenu from "./HamburgerMenu.tsx"
 import logo from '../assets/logo.png'
-import {routes} from "../data/navigationData.tsx";
+import { routes } from "../data/navigationData.tsx";
 
 export default function Header() {
     const location = useLocation()
     return (
         <>
-            <header className='sticky top-0 z-50 bg-gray-950 w-full border-b-4 border-indigo-400'>
+            <header className='sticky top-0 z-50 bg-black w-full border-b-4 border-indigo-400'>
 
                 <div className='mx-auto max-w-7xl px-4 h-16 flex items-center justify-between mb-4'>
 
                     <div className='flex items-center gap-4'>
                         {/* Logo as Home Button */}
                         <Link to='/'
-                              onClick={() => {
-                                  window.scrollTo({top: 0, behavior: 'smooth'})
-                              }}
+                            onClick={() => {
+                                window.scrollTo({ top: 0, behavior: 'smooth' })
+                            }}
                         >
                             <img
                                 src={logo}
@@ -35,7 +35,7 @@ export default function Header() {
                                 <Link
                                     key={index}
                                     to={route.path}
-                                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                     className={`text-lg md:text-xl font-medium tracking-wider uppercase transition-colors duration-200 hover:text-white
                                         ${isActive ? 'text-indigo-400' : 'text-stone-300'}`}
                                 >
@@ -46,7 +46,7 @@ export default function Header() {
                     </nav>
 
                     <div className='md:hidden block'>
-                        <HamburgerMenu/>
+                        <HamburgerMenu />
                     </div>
 
                 </div>
