@@ -7,16 +7,23 @@ export default function Header() {
     const location = useLocation()
     return (
         <>
-            <header className='sticky top-0 z-50 bg-black w-5xl border-b border-[#e0e0e0]'>
-                <div className='w-full px-10 h-18 flex items-center justify-center'>
+            <header className='sticky top-0 z-50 w-full border-b border-[#e0e0e0] bg-black/95 backdrop-blur-sm md:max-w-5xl'>
+                <div className='mx-auto flex h-16 w-full max-w-5xl items-center px-4 sm:px-6 md:h-18 md:px-4'>
 
                     <title>
                         {`${routes.find((val) => val.path == location.pathname)?.name} | CDO`}
                     </title>
-                    <nav className='hidden md:flex items-between justify-between w-5xl'>
-                        <img src={Logo} className="h-12" />
 
-                        <div className="flex flex-row gap-8 justify-center items-center">
+                    <nav className='flex w-full items-center justify-between'>
+                        <Link
+                            to='/'
+                            aria-label='Cyber Defense Organization home'
+                            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        >
+                            <img src={Logo} alt='Cyber Defense Organization' className='h-10 w-auto md:h-12' />
+                        </Link>
+
+                        <div className='hidden flex-row items-center justify-center gap-8 md:flex'>
                             {routes.map((route, index) => {
 
                                 const isActive = location.pathname === route.path
@@ -34,11 +41,11 @@ export default function Header() {
                                 )
                             })}
                         </div>
-                    </nav>
 
-                    <div className='md:hidden block'>
-                        <HamburgerMenu />
-                    </div>
+                        <div className='block md:hidden'>
+                            <HamburgerMenu />
+                        </div>
+                    </nav>
 
                 </div>
 

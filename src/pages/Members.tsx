@@ -21,8 +21,8 @@ export default function Members() {
             {boardSections.map((section, sectionIndex) => (
                 <div key={sectionIndex} className='w-full'>
                     {/* Section Header */}
-                    <div className='flex items-center w-full mb-6'>
-                        <h2 className='text-2xl font-bold whitespace-nowrap mr-4 font-adwaita'>{section.title}</h2>
+                    <div className='mb-5 flex w-full items-center sm:mb-6'>
+                        <h2 className='mr-3 whitespace-nowrap font-adwaita text-xl font-bold sm:mr-4 sm:text-2xl'>{section.title}</h2>
                         <div className='flex-grow border-b border-[#e0e0e0]' />
                     </div>
 

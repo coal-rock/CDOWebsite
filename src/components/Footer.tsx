@@ -20,27 +20,27 @@ function FooterItem({ link, svg }: FooterItemProps) {
 export default function Footer() {
     return (
         <>
-            <div className='w-full flex flex-col items-center mt-auto'>
-                <hr className='w-5xl border-t border-[#e0e0e0]' />
+            <footer className='mt-auto flex w-full flex-col items-center px-4 sm:px-6 lg:px-0'>
+                <hr className='w-full max-w-5xl border-t border-[#e0e0e0]' />
 
-                <div className="flex flex-row justify-between w-full max-w-5xl px-2 lg:px-0">
-                    <div className="flex items-center font-adwaita font-bold text-xs text-[#e0e0e0]">
+                <div className="flex w-full max-w-5xl flex-col items-center justify-between gap-3 py-4 sm:flex-row sm:gap-4 sm:py-0">
+                    <div className="flex items-center text-center font-adwaita text-xs font-bold text-[#e0e0e0]">
                         © 2026 CYBER DEFENSE ORGANIZATION
                     </div>
 
-                    <div className="flex items-center font-adwaita font-bold text-xs text-[#e0e0e0] hover:white hover:underline">
+                    <div className="flex items-center font-adwaita text-xs font-bold text-[#e0e0e0] hover:underline">
                         <a href="mailto:eboard@uacyber.org">
                             eboard@uacyber.org
                         </a>
                     </div>
 
-                    <div className='flex items-center gap-4 py-4'>
+                    <div className='flex items-center gap-4 sm:py-4'>
                         {footerItems.map((item, index) => (
                             <FooterItem key={index} link={item.link} svg={item.svg} />
                         ))}
                     </div>
                 </div>
-            </div>
+            </footer>
         </>
     )
 }

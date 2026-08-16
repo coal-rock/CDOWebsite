@@ -1,5 +1,4 @@
 import PageLayout from "../components/PageLayout.tsx";
-import Button from "../components/Button.tsx";
 import Section from "../components/Section.tsx";
 import GDDCImage from '../assets/gddc.jpg';
 

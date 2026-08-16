@@ -1,81 +1,58 @@
-import {Link} from "react-router";
-import {useState} from "react";
+import { Link, useLocation } from "react-router";
+import { useEffect, useState } from "react";
 
-import {routes} from "../data/navigationData.tsx";
-
-import logo from "../assets/logo.png";
+import { routes } from "../data/navigationData.tsx";
 
 export default function HamburgerMenu() {
     const [open, setOpen] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        setOpen(false);
+    }, [location.pathname]);
+
     return (
         <>
-            {/* Menu Opening Button */}
-            <svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'
-                 className='stroke-white mt-4 mr-8 cursor-pointer' onClick={() => setOpen(true)}>
-                <path d='M7 10H64' strokeWidth='4'/>
-                <path d='M7 24H64' strokeWidth='4'/>
-                <path d='M7 38H64' strokeWidth='4'/>
-            </svg>
-
-            {/* Menu Sliding Backdrop */}
-            <div
-                className={`fixed inset-0 z-40 backdrop-blur-sm transition-opacity duration-300 
-                ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
-                onClick={() => setOpen(false)}
-            />
-
-            <div
-                className={`p-4 fixed top-0 right-0 z-50 h-full w-full bg-gray-950 shadow-lg transform transition-transform duration-300 
-                ${open ? "translate-x-0" : "translate-x-full"}`}
+            <button
+                type='button'
+                aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={open}
+                className='flex size-11 items-center justify-center text-[#e0e0e0] transition-colors hover:text-white'
+                onClick={() => setOpen((current) => !current)}
             >
-                {/* Logo as Home Button */}
-                <div className='flex flex-row w-full items-center justify-between'>
-                    <Link to='/'
-                          className=''
-                          onClick={(e) => {
-                              if (location.pathname === '/') {
-                                  e.preventDefault()
-                                  window.scrollTo({top: 0, behavior: 'smooth'})
-                              }
-                              setOpen(false)
-                          }}
-                    >
-                        <img
-                            src={logo}
-                            alt={``}
-                            className='h-32'>
-                        </img>
-                    </Link>
-                    {/* Menu Closing Button */}
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='white' width='48px' height='48px'
-                         viewBox='0 0 16 16'
-                         className='mr-8 cursor-pointer'
-                         onClick={() => setOpen(false)}>
-                        <path
-                            d='M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z'
-                            fillRule='evenodd'/>
-                    </svg>
-                </div>
+                <span className='sr-only'>{open ? 'Close navigation menu' : 'Open navigation menu'}</span>
+                <span className='relative block h-5 w-7'>
+                    <span className={`absolute left-0 top-0 block h-0.5 w-7 bg-current transition-all duration-200 ${open ? 'translate-y-[9px] rotate-45' : ''}`} />
+                    <span className={`absolute left-0 top-[9px] block h-0.5 w-7 bg-current transition-opacity duration-200 ${open ? 'opacity-0' : 'opacity-100'}`} />
+                    <span className={`absolute bottom-0 left-0 block h-0.5 w-7 bg-current transition-all duration-200 ${open ? '-translate-y-[9px] -rotate-45' : ''}`} />
+                </span>
+            </button>
 
-                {/* Menu Options */}
-                <div className='flex flex-col w-full items-center mt-12'>
-                    <div className='flex flex-col gap-4'>
-                        {routes.map((route, index) => (
+            <div
+                className={`fixed inset-x-0 top-16 border-b border-[#e0e0e0] bg-black shadow-2xl transition-all duration-200 ${
+                    open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'
+                }`}
+            >
+                <div className='mx-auto flex w-full max-w-5xl flex-col px-4 py-3 sm:px-6'>
+                    {routes.map((route, index) => {
+                        const isActive = location.pathname === route.path;
+
+                        return (
                             <Link
                                 to={route.path}
                                 key={index}
-                                className='text-gray-300 font-medium text-5xl p-2 hover:text-white transition-colors duration-200'
+                                className={`border-b border-white/15 px-1 py-3 text-base font-bold uppercase tracking-wider text-[#e0e0e0] transition-colors last:border-b-0 hover:text-white ${
+                                    isActive ? 'underline underline-offset-4' : ''
+                                }`}
                                 onClick={() => {
-                                    window.scrollTo({top: 0, behavior: 'smooth'})
-                                    setOpen(false)
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                    setOpen(false);
                                 }}
                             >
-                                <p className={(location.pathname == route.path) ? "text-indigo-400" : ""}>
-                                    <span className='text-yellow-400'>/</span>{route.name}
-                                </p>
+                                {route.name}
                             </Link>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
             </div>
         </>

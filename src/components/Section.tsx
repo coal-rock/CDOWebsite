@@ -9,8 +9,8 @@ export default function Section({ title, children }: SectionProps) {
     return (
         <section className="w-full flex flex-col">
 
-            <div className="flex items-center gap-2 w-full mb-2">
-                <h2 className='font-adwaita font-bold text-xl whitespace-nowrap'>
+            <div className="mb-3 flex w-full items-center gap-2 sm:mb-2">
+                <h2 className='whitespace-nowrap font-adwaita text-lg font-bold sm:text-xl'>
                     {title}
                 </h2>
 
@@ -18,7 +18,7 @@ export default function Section({ title, children }: SectionProps) {
             </div>
 
             {children && (
-                <div className="text-lg">
+                <div className="max-w-4xl text-base leading-relaxed sm:text-lg">
                     {children}
                 </div>
             )}
