@@ -12,8 +12,8 @@ export default function PageLayout({ title, description, image, children }: { ti
                 <div className="relative h-80 w-full max-w-5xl overflow-hidden border-b border-b-[#e0e0e0] after:pointer-events-none after:absolute after:inset-0 after:content-[''] after:bg-[url('https://db.cs.cmu.edu/wordpress/wp-content/themes/cmudb/assets/images/banner-overlay.png')] after:shadow-[inset_0_0_128px_0_rgb(0_0_0)] sm:h-96 md:h-[29rem]">
                     <img src={image} alt="" className="block h-full w-full object-cover blur-[1px]" />
 
-                    <div className="absolute inset-0 z-10 flex items-end sm:items-center">
-                        <div className="mx-auto flex w-full max-w-5xl flex-col px-5 py-7 sm:px-8 sm:py-0 md:px-9">
+                    <div className="absolute inset-0 z-10 flex shrink">
+                        <div className="mx-auto flex w-full max-w-5xl flex-col px-5 py-7 sm:px-8 sm:py-0 md:px-9 justify-center sm:pt-0 pt-4 shrink">
                             <div className="w-full max-w-xl font-adwaita text-2xl font-bold leading-tight text-[#e0e0e0] text-shadow-md text-shadow-black sm:text-3xl md:w-1/2">
                                 {title}
                             </div>

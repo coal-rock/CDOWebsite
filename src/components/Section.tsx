@@ -18,7 +18,7 @@ export default function Section({ title, children }: SectionProps) {
             </div>
 
             {children && (
-                <div className="max-w-4xl text-base leading-relaxed sm:text-lg">
+                <div className="max-w-5xl text-base leading-relaxed sm:text-lg">
                     {children}
                 </div>
             )}
