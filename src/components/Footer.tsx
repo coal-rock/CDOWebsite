@@ -23,12 +23,12 @@ export default function Footer() {
             <footer className='mt-auto flex w-full flex-col items-center px-4 sm:px-6 lg:px-0'>
                 <hr className='w-full max-w-5xl border-t border-[#e0e0e0]' />
 
-                <div className="flex w-full max-w-5xl flex-col items-center justify-between gap-3 py-4 sm:flex-row sm:gap-4 sm:py-0">
+                <div className="flex w-full max-w-5xl flex-col items-center justify-between gap-2 py-4 sm:flex-row sm:gap-4 sm:py-0">
                     <div className="flex items-center text-center font-adwaita text-xs font-bold text-[#e0e0e0]">
                         © 2026 CYBER DEFENSE ORGANIZATION
                     </div>
 
-                    <div className="flex items-center font-adwaita text-xs font-bold text-[#e0e0e0] hover:underline">
+                    <div className="flex items-center font-adwaita text-xs font-bold text-[#e0e0e0] hover:underline pb-1 sm:pb-0">
                         <a href="mailto:eboard@uacyber.org">
                             eboard@uacyber.org
                         </a>
