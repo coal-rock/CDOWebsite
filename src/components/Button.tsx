@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router";
+import { Link } from "react-router";
 
 interface ButtonProps {
     text: string
@@ -10,7 +10,7 @@ interface ButtonProps {
     onClick?: () => void
 }
 
-export default function Button({text, variant = 'primary', icon, showArrow, to, onClick}: ButtonProps) {
+export default function Button({ text, variant = 'primary', icon, showArrow, to, onClick }: ButtonProps) {
 
     const baseStyles = 'text-xl flex justify-center items-center font-medium py-2 w-full rounded transition-colors tracking-wide cursor-pointer'
 
@@ -25,9 +25,9 @@ export default function Button({text, variant = 'primary', icon, showArrow, to, 
             {text}
             {showArrow && (
                 <svg xmlns='http://www.w3.org/2000/svg' width='30px' height='30px' viewBox='0 0 24 24' fill='none'
-                     className='ml-2'>
+                    className='ml-2'>
                     <path d='M4 12H20M20 12L16 8M20 12L16 16' stroke='currentColor' strokeWidth='2'
-                          strokeLinecap='round' strokeLinejoin='round'/>
+                        strokeLinecap='round' strokeLinejoin='round' />
                 </svg>
             )}
         </>
@@ -37,7 +37,7 @@ export default function Button({text, variant = 'primary', icon, showArrow, to, 
         return (
             <Link
                 to={to}
-                onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={finalStyles}
             >
                 {innerContent}

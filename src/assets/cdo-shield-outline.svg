@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title">
+  <title id="title">CDO circuit shield</title>
+
+  <!-- Circuit traces. End nodes are open rings, matching the primary logo. -->
+  <g fill="none" stroke="currentColor" stroke-width="28" stroke-linejoin="round">
+    <path d="M82 552h218l90-147h194"/>
+    <circle cx="620" cy="405" r="25"/>
+
+    <circle cx="700" cy="552" r="25"/>
+    <path d="M736 552h182"/>
+
+    <path d="M165 700h114"/>
+    <circle cx="315" cy="700" r="25"/>
+
+    <circle cx="405" cy="830" r="25"/>
+    <path d="M441 830h179l90-130h128"/>
+  </g>
+
+  <!-- Custom outlined lettering, rebuilt to match the primary mark. -->
+  <g fill="none" stroke="currentColor" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M360 195h-40c-27 0-45 20-45 47v46c0 27 18 47 45 47h40"/>
+    <path d="M455 335V195h42c31 0 50 21 50 52v36c0 31-19 52-50 52Z"/>
+    <path d="M655 242c0-28 18-47 45-47h20c27 0 45 19 45 47v46c0 28-18 47-45 47h-20c-27 0-45-19-45-47Z"/>
+  </g>
+
+  <!-- Mascot silhouette redrawn as a clean, single-color shape. -->
+  <path
+    d="M453 596c-2-22 7-46 23-65l44-55c6-8 16-1 12 9l-18 43c-4 12 1 24 11 28 7 3 14-1 20-8l39-47c7-8 17-1 12 9l-22 43c-9 18-4 35 11 48 11 10 20 19 24 32 4 13 15 24 32 39l57 48c8 7 8 15 2 23-21 27-56 47-94 52-23 3-45-5-61-20l6 25c4 19-12 27-35 21-55-14-98-55-98-114 0-47 15-85 35-103Zm87 60c4 11 14 16 28 16-5-11-15-15-28-16Z"
+    fill="currentColor"
+    fill-rule="evenodd"
+    transform="translate(75 105) scale(.82)"
+  />
+
+  <!-- Drawn last so the circuit traces terminate cleanly at the perimeter. -->
+  <path
+    d="M500 25C305 60 137 132 28 235c24 265 112 485 258 625 64 60 136 105 214 120 78-15 150-60 214-120 146-140 234-360 258-625C863 132 695 60 500 25Z"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="32"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

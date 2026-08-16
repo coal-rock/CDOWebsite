@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Adwaita Sans";
+    src: url("./assets/fonts/AdwaitaSans-Variable.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+.font-adwaita {
+    font-family: "Adwaita Sans", sans-serif;
+}
+
 body {
     @apply text-white;
 }

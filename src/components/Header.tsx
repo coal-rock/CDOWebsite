@@ -7,10 +7,13 @@ export default function Header() {
     const location = useLocation()
     return (
         <>
-            <header className='sticky top-0 z-50 bg-black w-full border-b border-[#e0e0e0]'>
+            <header className='sticky top-0 z-50 bg-black w-5xl border-b border-[#e0e0e0]'>
+                <div className='w-full px-10 h-18 flex items-center justify-center'>
 
-                <div className='w-full px-4 h-18 flex items-center justify-center'>
-                    <nav className='hidden md:flex items-between justify-between w-full'>
+                    <title>
+                        {`${routes.find((val) => val.path == location.pathname)?.name} | CDO`}
+                    </title>
+                    <nav className='hidden md:flex items-between justify-between w-5xl'>
                         <img src={Logo} className="h-12" />
 
                         <div className="flex flex-row gap-8 justify-center items-center">
@@ -26,7 +29,7 @@ export default function Header() {
                                         className={`text-base font-bold tracking-wider uppercase hover:text-white text-[#e0e0e0]
                                         ${isActive ? 'underline' : ''}`}
                                     >
-                                        {route.name == 'menu' ? 'home' : route.name}
+                                        {route.name}
                                     </Link>
                                 )
                             })}
