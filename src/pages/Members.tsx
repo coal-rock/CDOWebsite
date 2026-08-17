@@ -35,7 +35,7 @@ function MembersSection({ sectionTitle, data, type }: MembersSectionProps) {
                             name={member.name}
                             boardPosition={(member as BoardCardProps).boardPosition}
                             headshot={member.headshot}
-                            bio="chud"
+                            bio={(member as BoardCardProps).bio}
                         /> ||
                         type == "alumni" &&
                         <AlumniCard

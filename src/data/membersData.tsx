@@ -18,19 +18,19 @@ const loadBoard = () => {
 const board = loadBoard();
 
 export const eBoardMembers: Array<BoardCardProps> = [
-    { name: 'Zoe Winden', boardPosition: 'President', bio: 'chud', headshot: board.zoe },
-    { name: 'Cole Brazinski', boardPosition: 'Vice President', bio: 'chud', headshot: board.coal },
-    { name: 'Samuel Nava', boardPosition: 'Chief Technician', bio: 'chud', headshot: board.samn },
-    { name: 'Mesyah Thomas-Harvey', boardPosition: 'Treasurer', bio: 'chud', headshot: board.mesyah },
-    { name: 'Xavier Daniel', boardPosition: 'Secretary', bio: 'chud', headshot: board.xavier },
-    { name: 'Jacob McNamara', boardPosition: 'Marketing', bio: 'chud', headshot: board.nophoto }
+    { name: 'Zoe Winden', boardPosition: 'President', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.zoe },
+    { name: 'Cole Brazinski', boardPosition: 'Vice President', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.coal },
+    { name: 'Samuel Nava', boardPosition: 'Chief Technician', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.samn },
+    { name: 'Mesyah Thomas-Harvey', boardPosition: 'Treasurer', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.mesyah },
+    { name: 'Xavier Daniel', boardPosition: 'Secretary', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.xavier },
+    { name: 'Jacob McNamara', boardPosition: 'Marketing', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.nophoto }
 ]
 
 export const cBoardMembers: Array<BoardCardProps> = [
-    { name: 'Panos Katsanis', boardPosition: 'Blue Team Captain', bio: 'chud', headshot: board.panos },
-    { name: 'Elijah Williams', boardPosition: 'Blue Team Co-Captain', bio: 'chud', headshot: board.elijah },
-    { name: 'Michael Conaway', boardPosition: 'Red Team Captain', bio: 'chud', headshot: board.michael },
-    { name: 'Isaac Visconti', boardPosition: 'Red Team Co-Captain', bio: 'chud', headshot: board.nophoto }
+    { name: 'Panos Katsanis', boardPosition: 'Blue Team Captain', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.panos },
+    { name: 'Elijah Williams', boardPosition: 'Blue Team Co-Captain', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.elijah },
+    { name: 'Michael Conaway', boardPosition: 'Red Team Captain', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.michael },
+    { name: 'Isaac Visconti', boardPosition: 'Red Team Co-Captain', bio: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.', headshot: board.nophoto }
 ]
 
 
