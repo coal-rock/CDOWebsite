@@ -55,11 +55,11 @@ export default function Members() {
     return (
         <PageLayout
             title="MEMBERS"
-            description="Meet this year's E-Board, plus the alumni who held these roles before them."
+            description="Meet this year's board, plus the alumni who held these roles before them."
             image={MembersImage}
         >
-            <MembersSection sectionTitle='2026-2027 EBoard' data={eBoardMembers} type="board" />
-            <MembersSection sectionTitle='2026-2027 CBoard' data={cBoardMembers} type="board" />
+            <MembersSection sectionTitle='2026-2027 Executive Board' data={eBoardMembers} type="board" />
+            <MembersSection sectionTitle='2026-2027 Committee Board' data={cBoardMembers} type="board" />
             <MembersSection sectionTitle='Alumni' data={alumniMembers} type="alumni" />
         </PageLayout>
     )

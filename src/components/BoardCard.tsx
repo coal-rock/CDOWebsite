@@ -8,7 +8,7 @@ export interface BoardCardProps {
 export function BoardCard({ name, bio, boardPosition, headshot }: BoardCardProps) {
     return (
         <>
-            <div className="flex flex-col border border-[#e0e0e0]">
+            <div className="flex flex-col border border-[#e0e0e0]/75">
                 <div
                     className='flex min-w-0 flex-row items-center'>
 
@@ -51,7 +51,7 @@ export function AlumniCard({ name, headshot, jobTitle, company }: AlumniCardProp
     return (
         <>
             <div
-                className='flex min-w-0 flex-row items-center border border-[#e0e0e0]'>
+                className='flex min-w-0 flex-row items-center border border-[#e0e0e0]/75'>
                 <div className="aspect-square w-[44%] shrink-0 object-cover sm:w-1/3 p-4">
                     <img
                         src={headshot}
